@@ -5,6 +5,7 @@ import Howitworks from "./components/pages/Howitworks";
 import BoxMeals from "./components/pages/BoxMeals";
 import Plans from "./components/pages/Plans";
 import Meals from "./components/pages/Meals";
+import Order from "./components/pages/Order";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Route exact path="/" component={BoxMeals} />
         <Route exact path="/howitworks" component={Howitworks} />
         <Route exact path="/plans" component={Plans} />
-        <Route path="/Meals" component={Meals} />
+        <Route path="/meals" component={Meals} />
+        <Route path="/order" component={Order} />
       </div>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
 import Order from "./Order";
+import Meals from "./Meals";
 
 function Plans(props) {
   return (
@@ -19,15 +20,12 @@ function Plans(props) {
         conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
         rhoncus. Etiam vel condimentum magna, quis tempor nulla.
       </p>
-      <Link
-        to={`${props.match.url}/order`}
-        role="button"
-        className="btn btn-link"
-      >
-        Learn More
-      </Link>{" "}
-      <Link to="/plans" role="button" className="btn btn-link">
-        Learn Less
+      <Link to={"/meals"} role="button" className="btn btn-link">
+        Meal Plans
+      </Link>
+      <Route exact path={`${props.match.url}/meals`} component={Meals} />{" "}
+      <Link to="/order" role="button" className="btn btn-link">
+        Order Now
       </Link>
       <Route exact path={`${props.match.url}/order`} component={Order} />
     </div>
