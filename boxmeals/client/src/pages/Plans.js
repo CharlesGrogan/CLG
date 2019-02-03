@@ -23,11 +23,11 @@ function Plans(props) {
       <Link to={"/meals"} role="button" className="btn btn-link">
         Meal Plans
       </Link>
-      <Route exact path={`${props.match.url}/meals`} component={Meals} />{" "}
+      <Route path={`${props.match.url}/meals`} component={Meals} />{" "}
       <Link to="/order" role="button" className="btn btn-link">
         Order Now
       </Link>
-      <Route exact path={`${props.match.url}/order`} component={Order} />
+      <Route path={`${props.match.url}/order`} component={Order} />
     </div>
   );
 }
